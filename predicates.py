@@ -6,30 +6,37 @@ import pytest
 
 # is x between a and b
 def between(x, a, b):
-  pass
-  return True
+  if x > a and x < b:
+    return True
+  else:
+    return False
   
 # is x divisibleBy a ?
 def isDivisibleBy(x, a):
-  
-  return False
+  if x % a == 0:
+    return True
+  else:
+    return False
   
 # is x even?
 def isEvenNumber(x):
-  return False
+  if x % 2 == 0:
+    return True
+  else:
+    return False
   
 # is x odd?
 def isOddNumber(x):
-  return False
+  return not isEvenNumber(x)
   
 # this is done
 def isInteger(x):
-  return False  # no change needed here
+  if x != int(x):
+    return False  # no change needed here
 
 # withinRadius is the point (x1,y1) within distance of the point (x2, y2)
 def withinRadius(x1, y1, x2, y2, distance):
-  # t1.xcor()   t2.xcor()
-  # t1.ycor()   t2.ycor()
+  if x1 + distance
   return False
   
 # do the sides a, b, c make a Pythagorean triangle
