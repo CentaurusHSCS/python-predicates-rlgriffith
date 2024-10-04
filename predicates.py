@@ -36,7 +36,10 @@ def isInteger(x):
 
 # withinRadius is the point (x1,y1) within distance of the point (x2, y2)
 def withinRadius(x1, y1, x2, y2, distance):
-  return False
+  if (x1**2 + y1**2)**0.5 >= ((y1-y2)/(x1-x2)):
+    return True
+  else:
+    return False
   
 # do the sides a, b, c make a Pythagorean triangle
 # remember the Pythagorean theorem
@@ -49,8 +52,12 @@ def isPythagorean(a, b, c):
 # is number a prime number
 # I suggest using a loop here
 def isPrime(number):
-  
-  return True
+  primeNumbers = [2,3,5,7,11,13,17,19,23,29,31]
+  for i in len(primeNumbers):
+    if number == primeNumbers[i]:
+      return True
+      break
+  return False
   
 # is (x, y) a point with in the circle defined by (cx, cy) and radius
 # think about the circle equation (x-h)^2 + (y-k) ^2 = r^2
