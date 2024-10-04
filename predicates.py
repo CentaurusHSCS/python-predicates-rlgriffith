@@ -36,7 +36,7 @@ def isInteger(x):
 
 # withinRadius is the point (x1,y1) within distance of the point (x2, y2)
 def withinRadius(x1, y1, x2, y2, distance):
-  if (x1**2 + y1**2)**0.5 >= ((y1-y2)/(x1-x2)):
+  if ((y1-y2)**2 + (x1-x2)**2)**0.5 <= distance:
     return True
   else:
     return False
@@ -64,8 +64,10 @@ def isPrime(number):
 # where h,k is the center and x,y is point 
 # 
 def pointWithinCircle(x, y, cx, cy, radius):
-
-  return False
+  if withinRadius(x, y, cx, cy, radius):
+    return True
+  else:
+    return False
 
 
 # put test cases here
