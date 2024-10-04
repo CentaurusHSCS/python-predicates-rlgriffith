@@ -57,11 +57,12 @@ def isPythagorean(a, b, c):
 # I suggest using a loop here
 def isPrime(number):
   primeNumbers = [2,3,5,7,11,13,17,19,23,29,31]
-  for i in len(primeNumbers):
+  prime = False
+  for i in range(len(primeNumbers)):
     if number == primeNumbers[i]:
-      return True
+      prime = True
       break
-  return False
+  return prime
   
 # is (x, y) a point with in the circle defined by (cx, cy) and radius
 # think about the circle equation (x-h)^2 + (y-k) ^2 = r^2
