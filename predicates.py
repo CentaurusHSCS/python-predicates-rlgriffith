@@ -36,13 +36,15 @@ def isInteger(x):
 
 # withinRadius is the point (x1,y1) within distance of the point (x2, y2)
 def withinRadius(x1, y1, x2, y2, distance):
-  if x1 + distance
   return False
   
 # do the sides a, b, c make a Pythagorean triangle
 # remember the Pythagorean theorem
 def isPythagorean(a, b, c):
-  return False
+  if a**2 + b**2 == c**2:
+    return True
+  else:
+    return False
   
 # is number a prime number
 # I suggest using a loop here
