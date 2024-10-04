@@ -6,13 +6,15 @@ import pytest
 
 # is x between a and b
 def between(x, a, b):
-  if x > a and x < b:
+  if x >= a and x <= b:
     return True
   else:
     return False
   
 # is x divisibleBy a ?
 def isDivisibleBy(x, a):
+  if a == 0:
+    return False
   if x % a == 0:
     return True
   else:
@@ -32,7 +34,9 @@ def isOddNumber(x):
 # this is done
 def isInteger(x):
   if x != int(x):
-    return False  # no change needed here
+    return False
+  else:
+    return True
 
 # withinRadius is the point (x1,y1) within distance of the point (x2, y2)
 def withinRadius(x1, y1, x2, y2, distance):
